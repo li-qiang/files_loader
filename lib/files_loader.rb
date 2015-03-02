@@ -4,8 +4,7 @@ require "files_loader/collector"
 module FilesLoader
 
   def self.run(path)
-    files = Collector.run(path)
-    files.each { |file| require file }
+    Collector.new(path).run
   end
 
 end
