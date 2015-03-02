@@ -20,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Load FilesLoader
+
+    require 'files_loader'
+
+Fetch your path
+
+    FilesLoader.run( your_path )
 
 ## Contributing
 
