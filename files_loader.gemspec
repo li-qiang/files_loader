@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["li.q.q@qq.com"]
   spec.summary       = %q{文件加载工具}
   spec.description   = %q{加载一个目录下的所有rb文件}
-  spec.homepage      = "https://github.com/li-qiang/files_loader"
+  spec.homepage      = "https://github.com/li-qiang/ruby_files_loader"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
