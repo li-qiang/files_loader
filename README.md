@@ -1,6 +1,6 @@
 # FilesLoader
 
-TODO: Write a gem description
+Load all *.rb in a folder(you pointed)
 
 ## Installation
 
