@@ -4,7 +4,7 @@ module FilesLoader
       files = []
       Dir[path + '/*'].each do|file|
         if File.directory?(file)
-          collect(file)
+          run(file)
         elsif file =~ /(.*).rb/
            files << file
         end
