@@ -3,7 +3,7 @@ require "files_loader/collector"
 
 module FilesLoader
 
-  def run(path)
+  def self.run(path)
     files = Collector.run(path)
     files.each { |file| require file }
   end
