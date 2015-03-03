@@ -1,9 +1,10 @@
 module FilesLoader
   class Collector
 
-    def initialize(path)
+    def initialize(path, options)
       @path = path
       @files = []
+      @options = options
     end
 
     def run
@@ -16,8 +17,14 @@ module FilesLoader
         if File.directory?(file)
           fetch(file)
         elsif file =~ /.rb$/
-          @files << file
+          @files << file unless except?(file)
         end
+      end
+    end
+
+    def except?(file)
+      (@options[:except]||[]).find do|reg|
+        Regexp.new(reg) =~ file
       end
     end
 
