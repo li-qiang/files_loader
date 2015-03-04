@@ -13,7 +13,7 @@ module FilesLoader
     end
 
     def fetch(path)
-      Dir[ path + '/*' ].each do|file|
+      Dir[ path + '/*' ].sort.each do|file|
         if File.directory?(file)
           fetch(file)
         elsif file =~ /.rb$/
